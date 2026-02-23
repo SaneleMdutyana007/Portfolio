@@ -1,0 +1,574 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanele Mdutyana | Software Developer</title>
+    <link rel="stylesheet" href="css/Portfolio.css">
+    <!-- Fixed Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer" />
+
+    <!-- PDF.js for PDF preview -->
+    <!-- Use jsDelivr instead of Cloudflare -->
+    <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
+    <!-- Set the worker immediately after -->
+    <script>
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.worker.min.js';
+    </script>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="fade-in">Hi, I'm <span class="highlight">Sanele Mdutyana</span></h1>
+                <h2 class="fade-in">Software Developer</h2>
+                <p class="fade-in">Building clean, efficient solutions with C#, .NET, and modern web technologies</p>
+                <div class="hero-buttons fade-in">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-placeholder">
+                    <img src="~/Me.webp" alt="Sanele Mdutyana - Software Developer" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- arrow: home -> about -->
+    <a href="#about" class="section-arrow" aria-label="Scroll to About">
+        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+    </a>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Motivated Information Technology graduate with hands-on experience in programming, project management, and system development. Eager to begin a career in software development and apply theoretical and practical knowledge in a professional environment.</p>
+                    <p>I recently completed an Advanced Diploma in Information Technology at Nelson Mandela University, where I developed a strong foundation in full-stack development, database management, and the software development lifecycle.</p>
+                    <p>When I'm not coding, I enjoy exploring new technologies, contributing to open-source projects, and continuous learning.</p>
+                    <button type="button"
+                            class="btn btn-primary open-pdf-modal"
+                            data-pdf="~/CV.SM.pdf"
+                            data-title="CV - Sanele Mdutyana"
+                            aria-label="Preview CV">
+                        <i class="fas fa-file-pdf"></i> Preview CV
+                    </button>
+                </div>
+                <div class="about-card">
+                    <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                    <ul>
+                        <li><strong>Advanced Diploma in IT</strong> - Nelson Mandela University</li>
+                        <li><strong>Diploma in IT</strong> - Nelson Mandela University</li>
+                        <li><strong>National Senior Certificate</strong> - Zanokhanyo Baptist School</li>
+                    </ul>
+
+                    <h3><i class="fas fa-certificate"></i> Certifications</h3>
+                    <ul>
+                        <li>CISCO: Introduction to Cybersecurity</li>
+                        <li>CISCO: Introduction to Networks</li>
+                        <li>Valid Driver's License (C1)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="projects-fine-print">
+        <i class="fas fa-info-circle" style="color: #4a6fa5; margin-right: 8px;"></i>
+        <p><small><em>Note: The majority of projects featured here are personal and/or academic showcases. They were not commercially deployed and are intended to demonstrate my technical capabilities, problem-solving skills, and future potential in software development.</em></small></p>
+    </div>
+
+    <br />
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- Pharmacy System Project -->
+                <div class="project-card" data-project-id="pharmacy">
+                    <div class="project-image">
+                        <img src="~/Pharmacy.webp" class="project-img" alt="Pharmacy System" />
+                    </div>
+                    <div class="project-content">
+                        <h3>Online Pharmacy System</h3>
+                        <p>Full-stack pharmacy management system with user authentication, inventory management, and sales reporting.</p>
+                        <div class="tech-tags">
+                            <span>C#</span>
+                            <span>ASP.NET MVC</span>
+                            <span>SQL Server</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <button class="btn-small btn-primary open-github-modal" data-project="pharmacy">
+                                <i class="fab fa-github"></i> Code
+                            </button>
+                            <button class="btn-small btn-secondary open-video-modal" data-project="pharmacy">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Task Manager API Project -->
+                <div class="project-card" data-project-id="task-manager">
+                    <div class="project-image">
+                        <img src="~/Task.webp" class="project-img" alt="Task Manager" />
+                    </div>
+                    <div class="project-content">
+                        <h3>Task Manager API</h3>
+                        <p>RESTful API for task management with user authentication, CRUD operations, and role-based permissions.</p>
+                        <div class="tech-tags">
+                            <span>C#</span>
+                            <span>.NET Core</span>
+                            <span>SQL Server</span>
+                            <span>JWT</span>
+                        </div>
+                        <div class="project-links">
+                            <button class="btn-small btn-primary open-github-modal" data-project="task-manager">
+                                <i class="fab fa-github"></i> Code
+                            </button>
+                            <button class="btn-small btn-secondary open-api-docs-modal" data-project="task-manager">
+                                <i class="fas fa-external-link-alt"></i> API Docs
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Weather Dashboard Project -->
+                <div class="project-card" data-project-id="weather">
+                    <div class="project-image">
+                        <img src="~/weather.jpg" class="project-img" alt="Weather Dashboard" />
+                    </div>
+                    <div class="project-content">
+                        <h3>Weather Dashboard</h3>
+                        <p>Responsive weather application with location detection, forecasts, and interactive charts using public APIs.</p>
+                        <div class="tech-tags">
+                            <span>JavaScript</span>
+                            <span>HTML/CSS</span>
+                            <span>API Integration</span>
+                            <span>Chart.js</span>
+                        </div>
+                        <div class="project-links">
+                            <button class="btn-small btn-primary open-github-modal" data-project="weather">
+                                <i class="fab fa-github"></i> Code
+                            </button>
+                            <button class="btn-small btn-secondary open-live-demo-modal" data-project="weather">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Barbershop Booking System Project -->
+                <div class="project-card" data-project-id="barbershop">
+                    <div class="project-image">
+                        <img src="~/shop.png" class="project-img" alt="Barbershop Booking" />
+                    </div>
+                    <div class="project-content">
+                        <h3>Barbershop Online Booking</h3>
+                        <p>Online booking system for barbershops with appointment scheduling, staff management, and customer notifications.</p>
+                        <div class="tech-tags">
+                            <span>C#</span>
+                            <span>ASP.NET MVC</span>
+                            <span>SQL Server</span>
+                            <span>JavaScript</span>
+                            <span>Bootstrap</span>
+                        </div>
+                        <div class="project-links">
+                            <button class="btn-small btn-primary open-github-modal" data-project="barbershop">
+                                <i class="fab fa-github"></i> Code
+                            </button>
+                            <button class="btn-small btn-secondary open-video-modal" data-project="barbershop">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- arrow: projects -> skills -->
+    <a href="#skills" class="section-arrow" aria-label="Scroll to Skills">
+        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+    </a>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills & Certificates</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Programming</h3>
+                    <div class="skill-tags">
+                        <span>C#</span>
+                        <span>ASP.NET MVC</span>
+                        <span>JavaScript</span>
+                        <span>Python</span>
+                        <span>SQL</span>
+                        <span>HTML/CSS</span>
+                        <span>PHP</span>
+                        <span>Angular</span>
+                        <span>Ajax</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-database"></i> Platforms & Tools</h3>
+                    <div class="skill-tags">
+                        <span>SQL Server</span>
+                        <span>GitHub</span>
+                        <span>Azure</span>
+                        <span>Visual Studio</span>
+                        <span>Trello</span>
+                        <span>Microsoft Office</span>
+                        <span>Canva</span>
+                        <span>Figma</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-cogs"></i> Core Competencies</h3>
+                    <div class="skill-tags">
+                        <span>Knowledgeable about SDLCs &  Agile Methods</span>
+                        <span>Able to handle confidentional information with descretion</span>
+                        <span>Analytical & Problem Solving Mindset</span>
+                        <span>Project Management</span>
+                        <span>System Analysis & Hardware Managemen</span>
+                        <span>Detail Oriented</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-certificate"></i> Certificates</h3>
+                    <div class="certificate-links">
+                        <button class="certificate-link open-pdf-modal" data-pdf="certificates/cisco-cybersecurity.pdf" data-title="CISCO: Introduction to Cybersecurity">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>CISCO: Introduction to Cybersecurity</span>
+                            <i class="fas fa-external-link-alt external-icon"></i>
+                        </button>
+                        <button class="certificate-link open-pdf-modal" data-pdf="certificates/cisco-networks.pdf" data-title="CISCO: CCNAv7 - Introduction to Networks">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>CISCO: Introduction to Networks (CCNAv7)</span>
+                            <i class="fas fa-external-link-alt external-icon"></i>
+                        </button>
+                        <button class="certificate-link open-pdf-modal" data-pdf="certificates/diploma.pdf" data-title="Diploma in Information Technology">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Diploma in Information Technology</span>
+                            <i class="fas fa-external-link-alt external-icon"></i>
+                        </button>
+                        <button class="certificate-link open-pdf-modal" data-pdf="certificates/Completion letter.pdf" data-title="Advanced Diploma in Information Technology">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Advanced Diploma in Information Technology</span>
+                            <i class="fas fa-external-link-alt external-icon"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- arrow: skills -> contact -->
+    <a href="#contact" class="section-arrow" aria-label="Scroll to Contact">
+        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+    </a>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>
+                                <a href="mailto:SaneleMdutyana007@Outlook.com" class="contact-link">
+                                    SaneleMdutyana007@Outlook.com
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone/WhatsApp</h3>
+                            <p>
+                                <a href="https://wa.me/27656021519" target="_blank" class="contact-link">
+                                    +27 65 602 1519
+                                </a>
+                            </p>
+                            <small>Click to chat on WhatsApp</small>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <h3>LinkedIn</h3>
+                            <p>
+                                <a href="https://www.linkedin.com/in/sanele-mdutyana-970b813a8/" target="_blank" class="contact-link">
+                                    sanelemdutyana
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <h3>GitHub</h3>
+                            <p>
+                                <a href="https://github.com/SaneleMdutyana007" target="_blank" class="contact-link">
+                                    SaneleMdutyana007
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm" action="https://formspree.io/f/xpqdjrwz" method="POST">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <input type="hidden" name="_subject" value="New message from portfolio website">
+                        <input type="tel" name="phone" placeholder="Your Phone Number (Optional)">
+                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                        <div id="form-message"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- About Section -->
+                <div class="footer-section">
+                    <h4 class="footer-heading">About Me</h4>
+                    <div class="about-content">
+                        <p class="about-name">Sanele Mdutyana</p>
+                        <p class="about-text">
+                            Full-stack developer specializing in C#, .NET, and modern web technologies.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Quick Links Section -->
+                <div class="footer-section">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <nav class="quick-links">
+                        <a href="#home" class="quick-link">Home</a>
+                        <a href="#about" class="quick-link">About</a>
+                        <a href="#projects" class="quick-link">Projects</a>
+                        <a href="#skills" class="quick-link">Skills</a>
+                        <a href="#contact" class="quick-link">Contact</a>
+                    </nav>
+                </div>
+
+                <!-- Contact & Location Section -->
+                <div class="footer-section">
+                    <h4 class="footer-heading">Location</h4>
+                    <div class="contact-info">
+                        <br />
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <p>Port Elizabeth,</p>
+                                <p>South Africa</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media Section -->
+                <div class="footer-section">
+                    <h4 class="footer-heading">Connect With Me</h4>
+                    <br />
+                    <div class="social-icons">
+                        <a href="https://wa.me/27656021519" target="_blank" class="social-icon" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="mailto:SaneleMdutyana007@Outlook.com" class="social-icon" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://github.com/SaneleMdutyana007" target="_blank" class="social-icon" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/sanele-mdutyana-970b813a8/" target="_blank" class="social-icon" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <button type="button" class="social-icon open-pdf-modal" data-pdf="~/CV.SM.pdf" data-title="CV - Sanele Mdutyana" aria-label="Preview CV">
+                            <i class="fas fa-file-pdf"></i>   <!-- fixed icon -->
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; <span id="current-year">2024</span> Sanele Mdutyana. All rights reserved.</p>
+                </div>
+                <div class="legal-links">
+                    <a href="#" class="legal-link">Privacy Policy</a>
+                    <span class="divider">|</span>
+                    <a href="#" class="legal-link">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- All Modals -->
+    <!-- Video Modal Template -->
+    <div id="videoModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="videoModalTitle">Project Demo</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <video controls id="projectVideo" style="width: 100%; max-height: 70vh;">
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="modal-footer">
+                <a href="#" id="downloadVideoLink" class="btn-small btn-primary" download>Download Video</a>   <!-- fixed -->
+            </div>
+        </div>
+    </div>
+
+    <!-- GitHub Modal Template -->
+    <div id="githubModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="githubModalTitle">Project Repository</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="repo-info">
+                    <div class="repo-header">
+                        <i class="fab fa-github repo-icon"></i>
+                        <h4 id="repoName"></h4>
+                    </div>
+                    <p id="repoDescription"></p>
+                    <div class="tech-tags" id="repoTechTags">
+                        <!-- Tech tags will be dynamically inserted here -->
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a id="githubRepoLink" class="btn-small btn-primary" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+                    <i class="fab fa-github"></i> Open in GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- API Docs Modal Template -->
+    <div id="apiDocsModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="apiDocsTitle">API Documentation</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="api-docs-content">
+                    <div id="apiDocsInfo">
+                        <!-- API documentation will be dynamically inserted here -->
+                    </div>
+                    <div class="api-endpoints">
+                        <h4>Available Endpoints:</h4>
+                        <div id="apiEndpointsList">
+                            <!-- API endpoints will be dynamically inserted here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" id="apiPostmanLink" class="btn-small btn-primary" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Open Postman Collection
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Live Demo Modal Template -->
+    <div id="liveDemoModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="liveDemoTitle"> Demo</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="live-demo-content">
+                    <div id="liveDemoInfo">
+                        <!-- Live demo information will be dynamically inserted here -->
+                    </div>
+                    <div class="demo-screenshot">
+                        <img id="demoScreenshot" src="" alt="Project Screenshot" style="width: 100%; border-radius: 8px;">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" id="liveDemoLink" class="btn-small btn-primary" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Open Live Demo
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- PDF Preview Modal Template -->
+    <div id="pdfModal" class="modal-overlay">
+        <div class="modal-content pdf-modal">
+            <div class="modal-header">
+                <h3 id="pdfModalTitle">Certificate Preview</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="pdf-container">
+                    <div class="pdf-toolbar">
+                        <button id="pdfPrev" class="btn-small btn-secondary">
+                            <i class="fas fa-chevron-left"></i> Previous
+                        </button>
+                        <span class="page-info">
+                            Page <span id="pdfPageNum"></span> of <span id="pdfPageCount"></span>
+                        </span>
+                        <button id="pdfNext" class="btn-small btn-secondary">
+                            Next <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <button id="pdfZoomIn" class="btn-small btn-secondary">
+                            <i class="fas fa-search-plus"></i>
+                        </button>
+                        <button id="pdfZoomOut" class="btn-small btn-secondary">
+                            <i class="fas fa-search-minus"></i>
+                        </button>
+                    </div>
+                    <div class="pdf-viewer-container">
+                        <canvas id="pdfCanvas"></canvas>
+                    </div>
+                    <div class="pdf-loading" id="pdfLoading">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <p>Loading Certificate...</p>
+                    </div>
+                    <div class="pdf-error" id="pdfError" style="display: none;">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load JavaScript (no inline projectData) -->
+    <script src="js/Portfolio.js"></script>
+</body>
+</html>
